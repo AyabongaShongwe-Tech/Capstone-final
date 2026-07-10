@@ -1,0 +1,163 @@
+.reserve {
+  position: sticky;
+  top: 24px;
+  width: 340px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  background: #ffffff;
+}
+
+.reserve__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.reserve__price {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.reserve__price strong {
+  font-size: 22px;
+  color: var(--text);
+}
+
+.reserve__rating {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.reserve__star {
+  color: var(--text);
+}
+
+.reserve__reviews {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+/* ---- Fields ---- */
+.reserve__fields {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.reserve__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.reserve__field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  margin: -0.5px;
+}
+
+.reserve__field--right {
+  border-left: none;
+}
+
+.reserve__field--full {
+  border-top: none;
+}
+
+.reserve__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--text);
+}
+
+.reserve__field input,
+.reserve__field select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background: transparent;
+  width: 100%;
+  padding: 0;
+}
+
+/* ---- Button ---- */
+.reserve__btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--brand);
+  border: none;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+.reserve__btn:hover {
+  background: var(--brand-dark);
+}
+
+.reserve__note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 12px 0 0;
+}
+
+/* ---- Hint (invalid / missing dates) ---- */
+.reserve__hint {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ---- Breakdown ---- */
+.reserve__breakdown {
+  margin-top: 20px;
+}
+
+.reserve__line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.reserve__line span:first-child {
+  text-decoration: underline;
+  color: var(--text-muted);
+}
+
+.reserve__line--discount span:last-child {
+  color: #008a05;
+}
+
+.reserve__total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+@media (max-width: 960px) {
+  .reserve {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}

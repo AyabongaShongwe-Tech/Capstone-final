@@ -1,0 +1,98 @@
+/* ---- Listing rows ---- */
+.hotel-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+}
+
+.hotel-row__media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hotel-row__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+}
+
+.hotel-row__subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+}
+
+.hotel-row__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hotel-row__rule {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--border-strong);
+  margin: 16px 0;
+}
+
+.hotel-row__specs,
+.hotel-row__amenities {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+}
+
+.hotel-row__footer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hotel-row__rating {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hotel-row__star {
+  color: #ffb400;
+}
+
+.hotel-row__reviews {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.hotel-row__price {
+  font-size: 15px;
+}
+
+.hotel-row__price strong {
+  font-size: 18px;
+}
+
+.hotel-row__price span {
+  color: var(--text-muted);
+}
+
+@media (max-width: 720px) {
+  .hotel-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .hotel-row__media {
+    max-width: 320px;
+  }
+}

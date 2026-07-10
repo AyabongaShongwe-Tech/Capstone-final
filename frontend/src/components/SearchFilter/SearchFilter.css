@@ -1,0 +1,100 @@
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 6px 6px 6px 16px; /* tighter, more professional */
+  background: #ffffff;
+  border-radius: 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.search__field {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+  padding: 5px 14px;
+  border-radius: 24px;
+  transition: background 0.15s ease;
+}
+
+.search__field:hover {
+  background: #f7f7f7;
+}
+
+.search__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.search__input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-family: inherit;
+  padding: 0;
+  width: 100%;
+}
+
+.search__input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Location dropdown styled to match the pill */
+.search__select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.search__divider {
+  width: 1px;
+  height: 30px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.search__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  margin-left: 6px;
+  border: none;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #ffffff;
+  transition: background 0.15s ease;
+}
+
+.search__btn:hover {
+  background: var(--brand-dark);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .search {
+    flex-wrap: wrap;
+    border-radius: 24px;
+    padding: 10px;
+    gap: 8px;
+  }
+  .search__divider {
+    display: none;
+  }
+  .search__field {
+    flex: 1 1 45%;
+    border: 1px solid var(--border);
+  }
+  .search__btn {
+    margin-left: auto;
+  }
+}

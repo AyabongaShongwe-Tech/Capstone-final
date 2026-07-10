@@ -1,0 +1,87 @@
+.giftcards {
+  padding-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.giftcards__title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.giftcards__btn {
+  padding: 13px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #000000;
+  border: none;
+  border-radius: 8px;
+  transition: opacity 0.15s ease;
+}
+
+.giftcards__btn:hover {
+  opacity: 0.85;
+}
+
+/* ---- Overlapping gift card visuals ---- */
+.giftcards__visual {
+  position: relative;
+  height: 220px;
+}
+
+.gc {
+  position: absolute;
+  width: 200px;
+  height: 128px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.gc--left {
+  left: 6%;
+  top: 20px;
+  transform: rotate(-8deg);
+  background-color: #7a9a5b;
+  background-image: url('../../assets/inspiration.jpg');
+}
+
+.gc--center {
+  left: 34%;
+  top: 46px;
+  z-index: 2;
+  transform: rotate(6deg);
+  background: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gc--right {
+  left: 60%;
+  top: 10px;
+  transform: rotate(10deg);
+  background-color: #d98a5a;
+   background-image: url('../../assets/inspiration2.jpg');
+}
+
+.gc__logo {
+  width: 42px;
+  height: 42px;
+}
+
+@media (max-width: 720px) {
+  .giftcards {
+    grid-template-columns: 1fr;
+  }
+  .gc {
+    width: 150px;
+    height: 96px;
+  }
+}

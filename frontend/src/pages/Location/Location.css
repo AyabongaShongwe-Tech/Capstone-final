@@ -1,0 +1,138 @@
+.location-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.location__body {
+  flex: 1;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.location__heading {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* ---- Filter chips ---- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.chip-wrap {
+  position: relative;
+}
+
+.chip {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: var(--text);
+}
+
+.chip.is-active {
+  background: #f7f7f7;
+  border-color: var(--text);
+  font-weight: 600;
+}
+
+.chip--clear {
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+/* ---- Dropdowns ---- */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  min-width: 200px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown--wide {
+  min-width: 220px;
+}
+
+.dropdown__item {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text);
+  background: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.dropdown__item:hover {
+  background: #f7f7f7;
+}
+
+.dropdown__item.is-selected {
+  font-weight: 700;
+  background: #f2f2f2;
+}
+
+.dropdown__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin: 4px 8px 8px;
+}
+
+.dropdown__check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.dropdown__check:hover {
+  background: #f7f7f7;
+}
+
+.dropdown__check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--brand);
+}
+
+/* ---- Preference note ---- */
+.location__pref-note {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+/* ---- Results ---- */
+.location__empty {
+  padding: 40px 0;
+  color: var(--text-muted);
+  font-size: 16px;
+}

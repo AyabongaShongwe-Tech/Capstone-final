@@ -1,0 +1,119 @@
+.cal {
+  position: relative;
+  padding-top: 8px;
+}
+
+.cal__nav {
+  position: absolute;
+  top: 4px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  color: var(--text);
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.cal__nav:hover {
+  background: #f2f2f2;
+}
+
+.cal__nav--prev {
+  right: 44px;
+}
+
+.cal__nav--next {
+  right: 4px;
+}
+
+.cal__grids {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 8px;
+  max-width: 620px;
+}
+
+.cal__title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.cal__weekdays,
+.cal__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.cal__weekday {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding-bottom: 6px;
+}
+
+.cal__day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: var(--text);
+  border-radius: 50%;
+}
+
+.cal__day:not(.cal__day--empty):not(.cal__day--past):hover {
+  outline: 1px solid var(--text);
+}
+
+.cal__day--empty {
+  visibility: hidden;
+}
+
+.cal__day--past {
+  color: #c4c4c4;
+  text-decoration: line-through;
+  cursor: default;
+}
+
+.cal__day--range {
+  background: #f2f2f2;
+  border-radius: 0;
+}
+
+.cal__day--selected {
+  background: var(--text);
+  color: #ffffff;
+}
+
+.cal__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.cal__clear {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .cal__grids {
+    grid-template-columns: 1fr;
+  }
+  .cal__title--right,
+  .cal__grids > .cal__month:last-child {
+    display: none;
+  }
+}

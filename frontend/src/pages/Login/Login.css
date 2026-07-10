@@ -1,0 +1,98 @@
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  /* Blue frame around the page, matching the mockup */
+  border: 4px solid #1d9bf0;
+  background: #ffffff;
+}
+
+.login__card {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+}
+
+.login__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--brand);
+  margin-bottom: 40px;
+}
+
+.login__logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.login__title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.login__form {
+  text-align: left;
+}
+
+/* Login uses the shared .field styles but with a neutral label color */
+.login__form .field__label {
+  color: var(--primary);
+}
+
+.login__forgot {
+  display: block;
+  text-align: center;
+  margin: 6px 0 28px;
+  font-size: 13px;
+  color: var(--primary);
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
+
+.login__submit {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  padding: 12px;
+}
+
+.login__hint {
+  margin-top: 32px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: #f7f7f7;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login__hint-title {
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.login__hint p {
+  margin: 2px 0;
+}
+
+.login__hint code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  background: #ffffff;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 520px) {
+  .login__submit {
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Black band that holds the header nav and the search pill */
+.home__top {
+  background: var(--header-bg);
+}
+
+.home__search {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 28px;
+}
+
+@media (max-width: 900px) {
+  .home__search {
+    padding: 0 var(--gutter) 20px;
+  }
+}
