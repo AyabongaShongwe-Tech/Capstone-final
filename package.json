@@ -1,0 +1,10 @@
+{
+  "name": "airbnb-clone-capstone",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "heroku-postbuild": "cd backend && npm install && cd ../frontend && npm install && npm run build"
+  }
+}
